@@ -5,7 +5,7 @@ volumes:
     driver: local
 
 services:
-  php:
+  php_fpm:
     build: ./docker/php-fpm
     container_name: email_php_fpm
     working_dir: /var/www/

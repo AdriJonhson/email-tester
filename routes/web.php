@@ -18,7 +18,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/home', 'HomeController@index')->name('home');
-Route::post('/send-mail','HomeController@sendMail')->name('send.mail');
-
 Auth::routes();
+
+Route::get('/remove-old-emails', 'HomeController@removeOldEmails');

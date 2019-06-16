@@ -20,8 +20,7 @@ Route::get('/users', 'UserController@index')->name('admin.users.index');
 Route::get('/users/{user}', 'UserController@edit')->name('admin.users.edit');
 Route::put('/users/{user}', 'UserController@update')->name('admin.users.update');
 
-Route::get('/fake-menu-1', 'FakeMenuController@menu1')->name('admin.fakemenu.1');
-Route::get('/fake-menu-2', 'FakeMenuController@menu2')->name('admin.fakemenu.2');
-Route::get('/fake-menu-3', 'FakeMenuController@menu3')->name('admin.fakemenu.3');
+Route::get('/home', 'HomeController@index')->name('home');
+Route::post('/send-mail','HomeController@prepareShipping')->name('send.mail');
 
 
